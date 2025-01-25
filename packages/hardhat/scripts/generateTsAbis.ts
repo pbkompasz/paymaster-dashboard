@@ -35,11 +35,9 @@ function getContractNames(path: string) {
 }
 
 function getActualSourcesForContract(sources: Record<string, any>, contractName: string) {
-  console.log(sources);
   for (const sourcePath of Object.keys(sources)) {
     const sourceName = sourcePath.split("/").pop()?.split(".sol")[0];
     if (sourceName === contractName) {
-      console.log(sources[sourcePath]);
       const contractContent = sources[sourcePath].content as string;
       const regex = /contract\s+(\w+)\s+is\s+([^{}]+)\{/;
       const match = contractContent.match(regex);
