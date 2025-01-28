@@ -10,10 +10,6 @@ export const metadata = getMetadata({
 const Debug: NextPage = () => {
   return (
     <>
-      <div className="text-center mt-8 bg-secondary p-10">
-        <h1 className="text-4xl my-0">Paymaster Admin Dashboard</h1>
-        <p className="text-neutral">You can setup & interact with your deployed Paymaster</p>
-      </div>
       <Dashboard />
     </>
   );
